@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Library - Ravi's Adventure</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1>Content Library</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Ravi's Adventure</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="content-library.html">Content Library</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="manage-content.html">Manage Content</a></li>
+                        <li class="nav-item"><a class="nav-link" href="add-course.html">Add Course</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="login.html">Login/Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container my-5">
+        <section id="content-library">
+            <h2>Content Library</h2>
+            <div class="content-grid">
+                <div class="content-item">
+                    <img src="Images/Ancient-Manuscript.jpg" alt="Content 1" class="thumbnail" data-description="This is an ancient manuscript describing the mystical lands Ravi visits.">
+                    <h2>Ancient Manuscript</h2>
+                </div>
+                <div class="content-item">
+                    <img src="Images/Mystical-Map.jpg" alt="Content 2" class="thumbnail" data-description="A mystical map that guides Ravi through hidden realms.">
+                    <h2>Mystical Map</h2>
+                </div>
+                <div class="content-item">
+                    <img src="Images/Wisdom-Scroll.jpg" alt="Content 3" class="thumbnail" data-description="A scroll of wisdom containing teachings of ancient sages.">
+                    <h2>Wisdom Scroll</h2>
+                </div>
+                <div class="content-item">
+                    <img src="Images/Ancient-Relics.jpg" alt="Content 4" class="thumbnail" data-description="A collection of ancient relics and artifacts discovered by Ravi.">
+                    <h2>Ancient Relics</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Ravi's Adventure Content Library. All rights reserved.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(function(thumbnail) {
+                thumbnail.addEventListener('click', function() {
+                    var description = thumbnail.getAttribute('data-description');
+                    swal({
+                        title: "Description",
+                        text: description,
+                        icon: "info",
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
